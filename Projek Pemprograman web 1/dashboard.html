@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <title>Admin IamStore Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">shopping_cart</span> Iam.STORE
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">inventory_2</span> Produk
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">category</span> Kategori
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">groups</span> Kustomer
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">fact_check</span> Stok Barang
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">poll</span> Laporan
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">settings</span> Pengaturan
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>PRODUK</h3>
+                        <span class="material-icons-outlined">inventory_2</span>
+                    </div>
+                    <h1>270</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>KATEGORI</h3>
+                        <span class="material-icons-outlined">category</span>
+                    </div>
+                    <h1>48</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>KUSTOMER</h3>
+                        <span class="material-icons-outlined">groups</span>
+                    </div>
+                    <h1>60</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>PERINGATAN</h3>
+                        <span class="material-icons-outlined">notification_important</span>
+                    </div>
+                    <h1>0</h1>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="charts-card">
+                    <h2 class="chart-title">Tabel Laporan Penjualan Bulanan</h2>
+                    <table border="1" cellpadding="10" cellspacing="0" id="product-table"
+                        style="width: 100%; color: white;">
+                        <thead>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Kuantitas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Laptop</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>Smartphone</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Headphones</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Camera</td>
+                                <td>17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="charts-card">
+                    <h2 class="chart-title">Diagram bar Penjualan Bulanan</h2>
+                    <div id="bar-chart"></div>
+                </div>
+                <div class="charts-card">
+                    <h2 class="chart-title">Purchase and Sales Orders</h2>
+                    <div id="area-chart"></div>
+                </div>
+                <div class="charts-card">
+                    <h2 class="chart-title">Distribusi Produk</h2>
+                    <div id="pie-chart"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
